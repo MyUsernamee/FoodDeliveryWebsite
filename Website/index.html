@@ -1,0 +1,91 @@
+<html>
+
+    <head>
+        
+        <!-- Fonts from google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+        <!-- Import our css to style our page -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+
+            function hover(element) {
+                
+                //Take the elements background color and make it darker Then return to the original color when the user mouses away
+                let color = element.style.backgroundColor;
+
+                //Divied the color by 2 to make it darker
+                let darkerColor = color.replace(/\d+/g, function(match) {
+                    return parseInt(match, 10) / 2;
+                });
+
+                element.style.backgroundColor = darkerColor;
+
+            }
+
+            function mouseOut(element) {
+
+                //Take the elements background color and make it darker Then return to the original color when the user mouses away
+                let color = element.style.backgroundColor;
+
+                //Divied the color by 2 to make it darker
+                let darkerColor = color.replace(/\d+/g, function(match) {
+                    return parseInt(match, 10) * 2;
+                });
+
+                element.style.backgroundColor = darkerColor;
+
+            }
+
+        </script>
+
+        <h1 class="title">Login</h1>
+        <p class="subtitle" style="text-align: center;
+        margin-top: 30px;">Add your details to login.</p>
+
+        <div class="buble centerh" id="email" style="margin-top: 14.7%;
+        background-color: #F2F2F2;"><input id="email" class="credential"
+        
+        placeholder = "Your Email"
+        type = "text"
+        name = "email"
+
+        /></div>
+        <div class="buble centerh" id="password" style="margin-top: 32.1%;
+        background-color: #F2F2F2;"><input id="email" class="credential"
+        
+        placeholder = "Password"
+        type = "text"
+        name = "password"
+
+        /></div>
+
+
+        <button class="bublebutton centerh" style="margin-top: 50%;
+        background-color: #FC6011;" onmouseover="hover(this)" onmouseout="mouseOut(this)">Login</button>
+
+        <a href="forgot.html" class="subtitle"><p class="subtitle" style="text-align: center;
+            margin-top: 650px;">Forgot Password</p></a>
+
+        <p class="subtitle" style="text-align: center;
+        margin-top: 220px;">Or Login With</p>
+
+        <button class="bublebutton centerh" style="margin-top: 100px;
+        background-color: #367FC0;" onmouseover="hover(this)" onmouseout="mouseOut(this)">Facebook</button>
+
+        <button class="bublebutton centerh" style="margin-top: 300px;
+        background-color: #DD4B39;" onmouseover="hover(this)" onmouseout="mouseOut(this)">Google</button>
+
+        <p class="subtitle" style="text-align: center;
+        margin-top: 700px;"> Don't have a account?  <a href="signup.html" style="color: #FC6011"><p class="subtitle" style="text-align: center;" style="color: #FC6011">Sign up</p></a></p>
+        
+    </body>
+
+</html>
